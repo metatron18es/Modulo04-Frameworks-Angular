@@ -1,0 +1,14 @@
+<nav class="nav-menu">
+  <ng-template [ngIf]="isLogged" [ngIfElse]="loggedOut">
+    <a class="nav-menu__item" routerLink="/dashboard" routerLinkActive="nav-menu__item--selected">Dashboard</a>
+    <a class="nav-menu__item" routerLink="/crud" routerLinkActive="nav-menu__item--selected">Crud</a>
+    <a class="nav-menu__item" routerLink="/gallery" routerLinkActive="nav-menu__item--selected">Gallery</a>
+    <a class="nav-menu__item" routerLink="/profile" routerLinkActive="nav-menu__item--selected">Profile</a>
+    <button type="button" class="nav-menu__item" (click)="logout()">Logout</button>
+  </ng-template>
+  <ng-template #loggedOut>
+    <a class="nav-menu__item" routerLink="/home" routerLinkActive="nav-menu__item--selected">Home</a>
+    <a class="nav-menu__item" routerLink="/login" routerLinkActive="nav-menu__item--selected">Login</a>
+    <a class="nav-menu__item" routerLink="/about" routerLinkActive="nav-menu__item--selected">About</a>
+  </ng-template>
+</nav>

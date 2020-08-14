@@ -1,0 +1,39 @@
+<h2>Alta</h2>
+<div>
+  <form>
+    <div>
+      <label for="id">Id</label>
+      <input name="id" id="id" [(ngModel)]="newMember.id" required/>
+    </div>
+    <div>
+      <label for="name">Name</label>
+      <input name="name" id="name" [(ngModel)]="newMember.login" required minlength="6"/>
+    </div>
+    <div>
+      <label for="avatar">Avatar</label>
+      <input type="file" name="avatar" id="avatar" accept="image/*"/>
+    </div>
+    <button (click)="add()">Añadir</button>
+  </form>
+</div>
+
+<table>
+  <thead>
+    <tr>Avatar</tr>
+    <tr>Id</tr>
+    <tr>Name</tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let member of members">
+      <td>
+        <img [src]="member.avatar_url" width="30">
+      </td>
+      <td>
+        <span>{{ member.id }}</span>
+      </td>
+      <td>
+        <span>{{ member.login }}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>

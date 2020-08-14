@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+:root {
+  --color1: #293950;
+  --color2: #65A087;
+  --color3: #F5DBB4;
+  --color4: #EF7143;
+  --color5: #C24D2F;
+
+  --font-nunito: 'Nunito', sans-serif;
+
+  --font-light: 300;
+  --font-regular: 400;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  --space-base: 12px;
+}
+body {
+  font-family: var(--font-nunito);
+}
