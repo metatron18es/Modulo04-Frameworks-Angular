@@ -1,0 +1,27 @@
+<ul *ngIf="paginator.numOptions" class="paginator">
+  <li>
+    <button
+      type="button"
+      class="paginator__button paginator__button--prev"
+      (click)="prev()"
+      [disabled]="paginator.page === 1"
+    >Prev.</button>
+  </li>
+  <li *ngFor="let pageNumber of arrayPages">
+      <button
+        type="button"
+        class="paginator__button"
+        [class.paginator__button--selected]="pageNumber === (paginator.page - 1)"
+        (click)="goToPage(pageNumber + 1)"
+        [disabled]="pageNumber === (paginator.page - 1)"
+      >{{pageNumber + 1}}</button>
+  </li>
+  <li>
+    <button
+      type="button"
+      class="paginator__button paginator__button--next"
+      (click)="next()"
+      [disabled]="paginator.page === totalPages"
+    >Next</button>
+  </li>
+</ul>

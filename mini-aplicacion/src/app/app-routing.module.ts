@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'crud', component: CrudComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'gallery', component: GalleryComponent},
+  {path: 'gallery/:id', component: ImageGalleryComponent},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'logout', component: LogoutComponent},

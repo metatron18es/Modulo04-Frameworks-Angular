@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   
   login() {
     if(this.authService.login(this.user)) {
+      this.errorLogin = false;
       this.router.navigateByUrl('profile');
     } else {
       this.errorLogin = true;

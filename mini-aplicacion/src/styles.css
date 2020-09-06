@@ -3,21 +3,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
 
 :root {
-  --color1: #293950;
-  --color2: #65A087;
-  --color3: #F5DBB4;
-  --color4: #EF7143;
-  --color5: #C24D2F;
+  --color1: #000000;
+  --color2: #cccccc;
+  --color3: #aaaaaa;
+  --color4: #ffffff;
+  --color5: #666666;
+  --color6: #00c0b5;
+  --color7: #ffa500;
+  --color8: #ff0000;
+  --color9: #0000ff;
+  --color10: #00cc00;
 
   --font-nunito: 'Nunito', sans-serif;
+  --font-default: var(--font-nunito);
 
   --font-light: 300;
   --font-regular: 400;
   --font-semibold: 600;
   --font-bold: 700;
 
+  font-size: 62.5%; /* (62.5/100) * 16px = 10px */
+  --font-size--small: 1.4rem; /* 14px */
+  --font-size--default: 1.6rem; /* 16px */
+  --font-size--large: 2.0rem; /* 20px */
+  --font-size--xlarge: 2.4rem; /* 24px */
+
   --space-base: 12px;
 }
 body {
-  font-family: var(--font-nunito);
+  font: var(--font-regular) var(--font-size--default)/1.2 var(--font-default);
 }

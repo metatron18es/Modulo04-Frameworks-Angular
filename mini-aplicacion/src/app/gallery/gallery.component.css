@@ -1,0 +1,8 @@
+:host {
+  padding: 2em 0;
+}
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    gap: 1em;
+  }

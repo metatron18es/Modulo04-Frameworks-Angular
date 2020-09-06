@@ -1,0 +1,8 @@
+@import "../layout/css/generic.css";
+
+:host {
+  align-self: center;
+}
+.custom-form {
+  width: 300px;
+}

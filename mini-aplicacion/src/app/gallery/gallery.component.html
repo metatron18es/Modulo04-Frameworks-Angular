@@ -1,1 +1,9 @@
-<p>gallery works!</p>
+<ul class="gallery">
+  <li class="gallery-item" *ngFor="let image of imageArray | slice:interval.start:interval.end" (click)="showImage(image.id)">
+    <figure class="figure">
+      <img [src]=image.src [alt]=image.title class="figure-img">
+      <figcaption class="figure-title">{{ image.title }}</figcaption>
+    </figure>
+  </li>
+</ul>
+<app-paginator (pageEmitter)="onPageChange($event)" [paginator]=paginator></app-paginator>

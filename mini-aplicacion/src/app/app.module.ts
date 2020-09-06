@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { MenuComponent } from './layout/menu/menu.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
+import { PaginatorComponent } from './paginator/paginator.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +30,15 @@ import { LogoutComponent } from './logout/logout.component';
     ProfileComponent,
     MenuComponent,
     FooterComponent,
-    LogoutComponent
+    LogoutComponent,
+    ImageGalleryComponent,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

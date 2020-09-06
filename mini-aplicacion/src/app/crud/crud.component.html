@@ -1,21 +1,37 @@
 <h2>Alta</h2>
-<div>
-  <form>
-    <div>
-      <label for="id">Id</label>
-      <input name="id" id="id" [(ngModel)]="newMember.id" required/>
-    </div>
-    <div>
-      <label for="name">Name</label>
-      <input name="name" id="name" [(ngModel)]="newMember.login" required minlength="6"/>
-    </div>
-    <div>
-      <label for="avatar">Avatar</label>
-      <input type="file" name="avatar" id="avatar" accept="image/*"/>
-    </div>
-    <button (click)="add()">Añadir</button>
+<article class="form-content">
+  <form #crudForm="ngForm" class="custom-form" method="post">
+    <label class="custom-form__label" for="id">Id</label>
+    <input
+      name="id"
+      id="id"
+      placeholder="Id"
+      class="custom-form__input"
+      [(ngModel)]="newMember.id"
+      #id="ngModel"
+      required
+    />
+    <label class="custom-form__label" for="name">Name</label>
+    <input
+      name="name"
+      id="name"
+      placeholder="Name"
+      class="custom-form__input"
+      [(ngModel)]="newMember.login"
+      #login="ngModel"
+      required
+      minlength="6"
+    />
+    <label class="custom-form__label" for="avatar">Avatar</label>
+    <input
+      type="file"
+      name="avatar"
+      id="avatar"
+      accept="image/*"
+    />
+    <button type="button" [disabled]="crudForm.invalid" class="custom-form__button" (click)="add()">Añadir</button>
   </form>
-</div>
+</article>
 
 <table>
   <thead>

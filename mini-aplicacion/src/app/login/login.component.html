@@ -1,20 +1,30 @@
-<div class="login">
-  <form class="custom-form" method="post">
-    <h1>Login</h1>
+<article class="form-content">
+  <form #loginForm="ngForm" class="custom-form" method="post">
+    <label class="custom-form__label" for="user">User</label>
     <input
       type="email"
       [(ngModel)]="user.mail"
       name="email"
       placeholder="Email"
-      required="required"
+      class="custom-form__input"
+      #email="ngModel"
+      required
+      email
     />
+    <p *ngIf="email.touched && email.errors?.required" class="custom-form__error">Email is required</p>
+    <p *ngIf="email.touched && email.errors?.email" class="custom-form__error">Must be a valid email address</p>
+    <label class="custom-form__label" for="pass">Password</label>
     <input
       type="password"
       [(ngModel)]="user.password"
       name="password"
       placeholder="Password"
-      required="required"
+      class="custom-form__input"
+      #password="ngModel"
+      required
     />
-    <button type="button" (click)="login()">Log in</button>
+    <p *ngIf="email.touched && password.errors?.required" class="custom-form__error">Password is required</p>
+    <p *ngIf="errorLogin" class="custom-form__error">Email or password are incorrect</p>
+    <button type="button" [disabled]="loginForm.invalid" class="custom-form__button" (click)="login()">Log in</button>
   </form>
-</div>
+</article>
