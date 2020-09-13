@@ -6,3 +6,6 @@
     grid-template-columns: repeat(3, 250px);
     gap: 1em;
   }
+  .figure-img {
+    width: 100%;
+  }

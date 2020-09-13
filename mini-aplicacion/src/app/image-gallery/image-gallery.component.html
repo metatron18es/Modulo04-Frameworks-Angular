@@ -1,1 +1,16 @@
-<p>Image ID: {{ image_id }}</p>
+<section class="image-gallery">
+  <h1 class="image-gallery__title">{{ this.image.title }}</h1>
+  <article class="image-gallery__navigation">
+    <a *ngIf="image_id != navigation.firstId" class="image-gallery__link image-gallery__link--prev" [routerLink]="['/gallery/', navigation.prevId]">
+      <fa-icon class="fa-2x" [icon]="faChevronCircleLeft"></fa-icon>
+      <span class="sr-only">Go to previous image</span>
+    </a>
+    <figure class="figure">
+      <img [src]=this.image.src [alt]=this.image.title class="figure-img">
+    </figure>
+    <a *ngIf="image_id != navigation.lastId" class="image-gallery__link image-gallery__link--next" [routerLink]="['/gallery/', navigation.nextId]">
+      <fa-icon class="fa-2x" [icon]="faChevronCircleRight"></fa-icon>
+      <span class="sr-only">Go to next image</span>
+    </a>
+  </article>
+</section>

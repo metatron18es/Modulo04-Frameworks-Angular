@@ -1,7 +1,7 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
 import { AuthService } from "../../services/auth.service";
 import { Router } from '@angular/router';
-import { faHome, faInfoCircle, faSignInAlt, faSignOutAlt, faTh, faPhotoVideo, faUser, faDatabase } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faInfoCircle, faSignInAlt, faSignOutAlt, faTh, faPhotoVideo, faUser, faDatabase, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-menu',
@@ -13,14 +13,14 @@ export class MenuComponent implements OnInit {
 
   isLogged: boolean = false;
   username: string = 'Guest'
-  faHome = faHome;
-  faInfoCircle = faInfoCircle;
-  faSignInAlt = faSignInAlt;
-  faSignOutAlt = faSignOutAlt;
-  faTh = faTh;
-  faPhotoVideo = faPhotoVideo;
-  faUser = faUser;
-  faDatabase = faDatabase;
+  faHome:IconDefinition = faHome;
+  faInfoCircle:IconDefinition = faInfoCircle;
+  faSignInAlt:IconDefinition = faSignInAlt;
+  faSignOutAlt:IconDefinition = faSignOutAlt;
+  faTh:IconDefinition = faTh;
+  faPhotoVideo:IconDefinition = faPhotoVideo;
+  faUser:IconDefinition = faUser;
+  faDatabase:IconDefinition = faDatabase;
 
   constructor(private authService: AuthService, private router: Router) { }
   

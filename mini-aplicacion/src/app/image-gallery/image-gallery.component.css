@@ -1,0 +1,43 @@
+:host {
+  padding: 2em 0;
+}
+  .image-gallery__title {
+    margin-bottom: 15px;
+    text-align: center;
+    font: var(--font-bold) var(--font-size--xlarge) var(--font-default);
+    color: var(--color7);
+    text-shadow: 2px 2px 2px var(--color5);
+  }
+  .image-gallery__navigation {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+    .image-gallery__link {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      width: 40px;
+      height: 100%;
+      padding: 0 5px;
+      box-sizing: border-box;
+      color: var(--color7);
+      outline: none;
+      transition: background .3s, color .3s;
+    }
+      .image-gallery__link--prev {
+        left: 0;
+      }
+      .image-gallery__link--next {
+        right: 0;
+      }
+      .image-gallery__link fa-icon {
+        width: 100%;
+      }
+      .image-gallery__link:hover {
+        background: rgba(255, 255, 255, .3);
+        color: var(--color8);
+      }
