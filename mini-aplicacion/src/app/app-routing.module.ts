@@ -11,16 +11,71 @@ import { LogoutComponent } from './logout/logout.component';
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'about', component: AboutComponent},
-  {path: 'crud', component: CrudComponent},
-  {path: 'dashboard', component: DashboardComponent},
-  {path: 'gallery', component: GalleryComponent},
-  {path: 'gallery/:id', component: ImageGalleryComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'logout', component: LogoutComponent},
-  {path: 'profile', component: ProfileComponent},
+  {
+    path: '',
+    children: [
+      {
+        path: 'about',
+        component: AboutComponent,
+        data: {
+          breadcrumb: 'About'
+        }
+      }, {
+        path: 'crud',
+        component: CrudComponent,
+        data: {
+          breadcrumb: 'Crud'
+        }
+      }, {
+        path: 'dashboard',
+        component: DashboardComponent,
+        data: {
+          breadcrumb: 'Dashboard'
+        }
+      }, {
+        path: 'gallery',
+        data: {
+          breadcrumb: 'Gallery'
+        },
+        children: [
+          {
+            path: '',
+            component: GalleryComponent,
+          }, {
+            path: ':id',
+            component: ImageGalleryComponent,
+            data: {
+              breadcrumb: 'Image'
+            }
+          }
+        ] 
+      }, {
+        path: 'home',
+        component: HomeComponent,
+        data: {
+          breadcrumb: 'Home'
+        }
+      }, {
+        path: 'login',
+        component: LoginComponent,
+        data: {
+          breadcrumb: 'Login'
+        }
+      }, {
+        path: 'logout',
+        component: LogoutComponent,
+        data: {
+          breadcrumb: 'Logout'
+        }
+      }, {
+        path: 'profile',
+        component: ProfileComponent,
+        data: {
+          breadcrumb: 'Profile'
+        }
+      }
+    ],
+  },
 ];
 
 @NgModule({

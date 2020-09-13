@@ -9,7 +9,6 @@ main {
   justify-content: center;
   align-items: flex-start;
   height: calc(100vh - 140px);
-  background: var(--color3);
   overflow-y: auto;
 }
 

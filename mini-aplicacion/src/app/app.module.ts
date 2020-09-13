@@ -17,6 +17,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 import { PaginatorComponent } from './paginator/paginator.component';
+import { BreadcrumbsComponent } from './layout/breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PaginatorComponent } from './paginator/paginator.component';
     FooterComponent,
     LogoutComponent,
     ImageGalleryComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    BreadcrumbsComponent
   ],
   imports: [
     BrowserModule,
